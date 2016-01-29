@@ -14,7 +14,7 @@ load('Eps2.mat');
 load('Eps6.mat');
 
 % Compose row-augmented matrix and compute SVD
-A = [E1Matrix; E2Matrix; E6Matrix]; % row augmentation
+A = [E1Matrix, E2Matrix, E6Matrix]; % row augmentation
 [m,n]=size(A);
 if (m < n) 
     A = A';
@@ -121,7 +121,7 @@ for counter_copies = 1 : 1 :numCopies
 	end
 end
 
-save('100copies_11NLevels_2.mat','U','sigNoiseRatio','Doc_rightEV','Doc_rightEV_true');
+save('100copies_11NLevels_1.mat','U','sigNoiseRatio','Doc_rightEV','Doc_rightEV_true');
 
 
 
